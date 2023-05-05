@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
 }
 
 /** ===== Renkler ===== **/
@@ -47,7 +47,7 @@ body.dark nav {
     border: 1px solid #393838;
 }
 
-nav nav-bar {
+nav .nav-bar {
     position: relative;
     height: 100%;
     max-width: 1000px;
@@ -58,4 +58,51 @@ nav nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen {
+    color: var(--text-color);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .nav-bar .logo a {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.menu .logo-toggle {
+    display: none;
+}
+
+.nav-bar .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li {
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before {
+    opacity: 1;
 }
