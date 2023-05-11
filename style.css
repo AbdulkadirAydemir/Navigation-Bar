@@ -13,11 +13,11 @@
 
 :root {
     --body-color: #E4E9F7;
-    --nav-color: #a75ac0;
+    --nav-color: #6A2C70;
     --side-nav: #010718;
     --text-color: #FFF;
     --search-bar: #F2F2F2;
-    --search-text: #010718;
+    --search-text: #6A2C70;
 }
 
 body {
@@ -77,6 +77,11 @@ nav .nav-bar .logo a {
 
 .menu .logo-toggle {
     display: none;
+}
+
+.menu .nav-links li a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .nav-bar .nav-links {
@@ -277,5 +282,6 @@ body.dark .search-field i {
     .nav-links li a {
         display: block;
         margin-top: 20px;
+        text-decoration: none;
     }
 }
