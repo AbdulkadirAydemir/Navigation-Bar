@@ -23,3 +23,23 @@ modeToggle.addEventListener("click" , () => {
         localStorage.setItem("mode" , "dark-mode")
     }
 });
+
+//TODO: Search box 
+
+searchToggle.addEventListener("click", () => {
+    searchToggle.classList.toggle("active");
+});
+
+//TODO: Sidebar
+
+sidebarOpen.addEventListener("click", () => {
+    nav.classList.add("active")
+});
+
+body.addEventListener("click", e => {
+    let clicked = e.target;
+
+    if (!clicked.classList.contains("sidebarOpen") && !clicked.classList.contains("menu")) {
+        nav.classList.remove("active");
+    }
+});
